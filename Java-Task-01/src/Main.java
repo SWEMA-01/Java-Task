@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 
 public class Main {
@@ -50,7 +51,14 @@ public class Main {
         sentence = input.nextLine();
         System.out.println("Enter a keyword:");
         String keyword = input.nextLine();
-        System.out.println("Keyword \"" + keyword + "\" is present in the sentence.");
+
+        boolean found = sentence.contains(keyword);
+
+        if (found) {
+            System.out.println("Keyword is present in the sentence.");
+        } else {
+            System.out.println("Keyword is not present in the sentence.");
+        }
 
         //7
         System.out.println("Enter a sentence:");
@@ -66,6 +74,15 @@ public class Main {
         String str1 = input.nextLine();
         System.out.println("Enter second string:");
         String str2 = input.nextLine();
-        System.out.println("Strings are equal (ignoring case)");
 
-    }}
+        boolean equal = str1.equalsIgnoreCase(str2);
+
+        if (equal) {
+            System.out.println("Strings are equal (ignoring case)");
+        } else {
+            System.out.println("Strings are not equal");
+        }
+
+        input.close();
+    }
+}
